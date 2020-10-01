@@ -5,6 +5,7 @@ import android.util.Log
 import com.amplifyframework.AmplifyException
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin
 import com.amplifyframework.core.Amplify
+import com.amplifyframework.datastore.AWSDataStorePlugin
 import com.example.amplifyproject.BuildConfig.*
 import com.example.amplifyproject.other.ReleaseTree
 import dagger.hilt.android.HiltAndroidApp
@@ -32,6 +33,7 @@ class AmplifyProjectApplication : Application() {
         }
 
         Amplify.addPlugin(AWSCognitoAuthPlugin())
+        Amplify.addPlugin(AWSDataStorePlugin())
         try {
             Timber.i("MyAmplifyApp Initialized Amplify")
         } catch (error: AmplifyException) {

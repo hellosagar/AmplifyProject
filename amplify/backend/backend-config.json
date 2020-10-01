@@ -6,5 +6,19 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "api": {
+    "HelpingProjectApi": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AWS_IAM"
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
   }
 }

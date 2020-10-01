@@ -60,7 +60,5 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(R.layout.fragment
 class RegisterViewModel @ViewModelInject constructor(
     private val repository: AuthRepo
 ) : ViewModel() {
-
     fun createUser(): LiveData<Resource<String>> =  repository.createUser()
-
 }
