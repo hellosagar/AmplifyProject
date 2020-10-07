@@ -21,8 +21,8 @@ class AuthRepo @Inject constructor(
         userCreatedLiveData.postValue(Resource.loading(null))
 
         authCategory.signUp(
-            "username",
-            "Password123",
+            "sagaruser",
+            "sagar@123",
             AuthSignUpOptions.builder().userAttribute(
                 AuthUserAttributeKey.email(), "my@email.com").build(),
             { result ->

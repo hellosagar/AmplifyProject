@@ -34,6 +34,7 @@ class AmplifyProjectApplication : Application() {
 
         Amplify.addPlugin(AWSCognitoAuthPlugin())
         Amplify.addPlugin(AWSDataStorePlugin())
+        Amplify.configure(applicationContext)
         try {
             Timber.i("MyAmplifyApp Initialized Amplify")
         } catch (error: AmplifyException) {
